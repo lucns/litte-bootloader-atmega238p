@@ -1,0 +1,88 @@
+# See: http://code.google.com/p/arduino/wiki/Platforms
+
+menu.cpu=Processor
+
+##############################################################
+
+ProMiniInternal.name=ATmega328P Internal
+ProMiniInternal.build.mcu=atmega328p
+ProMiniInternal.upload.protocol=arduino
+ProMiniInternal.upload.tool=avrdude
+ProMiniInternal.bootloader.tool=avrdude
+ProMiniInternal.bootloader.unlock_bits=0x3F
+ProMiniInternal.bootloader.lock_bits=0x2F
+ProMiniInternal.build.board=AVR_ATMEGA328P
+ProMiniInternal.build.variant=standard
+
+menu.clock=Clock Speed
+
+ProMiniInternal.menu.clock.1MHz=1MHz BaudRate 9600
+ProMiniInternal.menu.clock.1MHz.build.f_cpu=1000000L
+ProMiniInternal.menu.clock.1MHz.upload.speed=9600
+ProMiniInternal.menu.clock.1MHz.bootloader.low_fuses=0x62
+ProMiniInternal.menu.clock.1MHz.bootloader.high_fuses=0xDC
+ProMiniInternal.menu.clock.1MHz.bootloader.extended_fuses=0xFF
+ProMiniInternal.menu.clock.1MHz.bootloader.file=custom/optiboot_atmega328p_1MHz_9600.hex
+ProMiniInternal.menu.clock.1MHz.upload.maximum_size=32256
+
+ProMiniInternal.menu.clock.1MHz2=0.9984MHz BaudRate 9600
+ProMiniInternal.menu.clock.1MHz2.build.f_cpu=1000000L
+ProMiniInternal.menu.clock.1MHz2.upload.speed=9600
+ProMiniInternal.menu.clock.1MHz2.bootloader.low_fuses=0x62
+ProMiniInternal.menu.clock.1MHz2.bootloader.high_fuses=0xDE
+ProMiniInternal.menu.clock.1MHz2.bootloader.extended_fuses=0xFF
+ProMiniInternal.menu.clock.1MHz2.bootloader.file=custom/optiboot_atmega328p_0.9984MHz_9600.hex
+ProMiniInternal.menu.clock.1MHz2.upload.maximum_size=32256
+
+ProMiniInternal.menu.clock.8MHz=8.2944MHz BaudRate 57600
+ProMiniInternal.menu.clock.8MHz.build.f_cpu=8000000L
+ProMiniInternal.menu.clock.8MHz.upload.speed=57600
+ProMiniInternal.menu.clock.8MHz.bootloader.low_fuses=0xE2
+ProMiniInternal.menu.clock.8MHz.bootloader.high_fuses=0xDC
+ProMiniInternal.menu.clock.8MHz.bootloader.extended_fuses=0xFD
+ProMiniInternal.menu.clock.8MHz.bootloader.file=custom/optiboot_atmega328p_8.2944MHz_57600.hex
+ProMiniInternal.menu.clock.8MHz.upload.maximum_size=32256
+
+ProMiniInternal.menu.clock.8MHz2=8MHz BaudRate 57600 (ProMini 3.3V)
+ProMiniInternal.menu.clock.8MHz2.build.f_cpu=8000000L
+ProMiniInternal.menu.clock.8MHz2.upload.speed=57600
+ProMiniInternal.menu.clock.8MHz2.bootloader.low_fuses=0xE2
+ProMiniInternal.menu.clock.8MHz2.bootloader.high_fuses=0xDA
+ProMiniInternal.menu.clock.8MHz2.bootloader.extended_fuses=0xFD
+ProMiniInternal.menu.clock.8MHz2.bootloader.file=atmega/ATmegaBOOT_168_atmega328_pro_8MHz.hex
+ProMiniInternal.menu.clock.8MHz2.upload.maximum_size=31744
+
+##############################################################
+
+Leonardo8MhzInternal.name=ATmega32U4 8Mhz Internal
+Leonardo8MhzInternal.vid.0=0x1B4F
+Leonardo8MhzInternal.pid.0=0x9207
+Leonardo8MhzInternal.vid.1=0x1B4F
+Leonardo8MhzInternal.pid.1=0x9208
+
+Leonardo8MhzInternal.upload.tool=avrdude
+Leonardo8MhzInternal.upload.protocol=avr109
+Leonardo8MhzInternal.upload.maximum_size=28672
+Leonardo8MhzInternal.upload.maximum_data_size=2560
+Leonardo8MhzInternal.upload.speed=57600
+Leonardo8MhzInternal.upload.disable_flushing=true
+Leonardo8MhzInternal.upload.use_1200bps_touch=true
+Leonardo8MhzInternal.upload.wait_for_upload_port=true
+
+Leonardo8MhzInternal.bootloader.tool=avrdude
+Leonardo8MhzInternal.bootloader.low_fuses=0x62
+Leonardo8MhzInternal.bootloader.high_fuses=0xd8
+Leonardo8MhzInternal.bootloader.extended_fuses=0xcf
+Leonardo8MhzInternal.bootloader.file=caterina-LilyPadUSB/Caterina-LilyPadUSB.hex
+Leonardo8MhzInternal.bootloader.unlock_bits=0x3F
+Leonardo8MhzInternal.bootloader.lock_bits=0x2F
+
+Leonardo8MhzInternal.build.mcu=atmega32u4
+Leonardo8MhzInternal.build.f_cpu=8000000L
+Leonardo8MhzInternal.build.vid=0x1B4F
+Leonardo8MhzInternal.build.pid=0x9208
+Leonardo8MhzInternal.build.usb_product="LilyPad USB"
+Leonardo8MhzInternal.build.board=AVR_LILYPAD_USB
+Leonardo8MhzInternal.build.core=arduino
+Leonardo8MhzInternal.build.variant=leonardo
+Leonardo8MhzInternal.build.extra_flags={build.usb_flags}

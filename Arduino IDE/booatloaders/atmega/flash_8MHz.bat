@@ -1,0 +1,1 @@
+avrdude -c usbasp -p m328p -U flash:w:ProMini_Internal_8MHz.hex

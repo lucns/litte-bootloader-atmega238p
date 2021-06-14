@@ -1,1 +1,0 @@
-avrdude -c usbasp -p m328p -U flash:w:optiboot_atmega328p_1MHz_9600.hex

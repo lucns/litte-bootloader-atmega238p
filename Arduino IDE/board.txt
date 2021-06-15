@@ -16,41 +16,23 @@ ProMiniInternal.build.variant=standard
 
 menu.clock=Clock Speed
 
-ProMiniInternal.menu.clock.1MHz=1MHz BaudRate 9600
+ProMiniInternal.menu.clock.1MHz=1MHz BaudRate 4800
 ProMiniInternal.menu.clock.1MHz.build.f_cpu=1000000L
-ProMiniInternal.menu.clock.1MHz.upload.speed=9600
+ProMiniInternal.menu.clock.1MHz.upload.speed=4800
 ProMiniInternal.menu.clock.1MHz.bootloader.low_fuses=0x62
-ProMiniInternal.menu.clock.1MHz.bootloader.high_fuses=0xDC
+ProMiniInternal.menu.clock.1MHz.bootloader.high_fuses=0xDE
 ProMiniInternal.menu.clock.1MHz.bootloader.extended_fuses=0xFF
-ProMiniInternal.menu.clock.1MHz.bootloader.file=custom/optiboot_atmega328p_1MHz_9600.hex
+ProMiniInternal.menu.clock.1MHz.bootloader.file=custom/optiboot_atmega328p_1MHz_4800bps.hex
 ProMiniInternal.menu.clock.1MHz.upload.maximum_size=32256
 
-ProMiniInternal.menu.clock.1MHz2=0.9984MHz BaudRate 9600
-ProMiniInternal.menu.clock.1MHz2.build.f_cpu=1000000L
-ProMiniInternal.menu.clock.1MHz2.upload.speed=9600
-ProMiniInternal.menu.clock.1MHz2.bootloader.low_fuses=0x62
-ProMiniInternal.menu.clock.1MHz2.bootloader.high_fuses=0xDE
-ProMiniInternal.menu.clock.1MHz2.bootloader.extended_fuses=0xFF
-ProMiniInternal.menu.clock.1MHz2.bootloader.file=custom/optiboot_atmega328p_0.9984MHz_9600.hex
-ProMiniInternal.menu.clock.1MHz2.upload.maximum_size=32256
-
-ProMiniInternal.menu.clock.8MHz=8.2944MHz BaudRate 57600
+ProMiniInternal.menu.clock.8MHz=8MHz BaudRate 38400
 ProMiniInternal.menu.clock.8MHz.build.f_cpu=8000000L
-ProMiniInternal.menu.clock.8MHz.upload.speed=57600
+ProMiniInternal.menu.clock.8MHz.upload.speed=38400
 ProMiniInternal.menu.clock.8MHz.bootloader.low_fuses=0xE2
 ProMiniInternal.menu.clock.8MHz.bootloader.high_fuses=0xDC
 ProMiniInternal.menu.clock.8MHz.bootloader.extended_fuses=0xFD
-ProMiniInternal.menu.clock.8MHz.bootloader.file=custom/optiboot_atmega328p_8.2944MHz_57600.hex
+ProMiniInternal.menu.clock.8MHz.bootloader.file=custom/optiboot_atmega328p_8MHz_38400bps.hex
 ProMiniInternal.menu.clock.8MHz.upload.maximum_size=32256
-
-ProMiniInternal.menu.clock.8MHz2=8MHz BaudRate 57600 (ProMini 3.3V)
-ProMiniInternal.menu.clock.8MHz2.build.f_cpu=8000000L
-ProMiniInternal.menu.clock.8MHz2.upload.speed=57600
-ProMiniInternal.menu.clock.8MHz2.bootloader.low_fuses=0xE2
-ProMiniInternal.menu.clock.8MHz2.bootloader.high_fuses=0xDA
-ProMiniInternal.menu.clock.8MHz2.bootloader.extended_fuses=0xFD
-ProMiniInternal.menu.clock.8MHz2.bootloader.file=atmega/ATmegaBOOT_168_atmega328_pro_8MHz.hex
-ProMiniInternal.menu.clock.8MHz2.upload.maximum_size=31744
 
 ##############################################################
 

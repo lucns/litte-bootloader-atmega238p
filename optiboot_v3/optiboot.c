@@ -4,11 +4,8 @@
 #include <avr/boot.h>
 
 #define LED_START_FLASHES 2
-//#define F_CPU 998400L
-//#define F_CPU 1000000L
-#define F_CPU 		8294400L
-#define BAUD_RATE   57600
-//#define BAUD_RATE   9600
+#define F_CPU 1000000L
+#define BAUD_RATE   4800
 
 #define LED_DDR     DDRB
 #define LED_PORT    PORTB
@@ -68,10 +65,6 @@
 #define WATCHDOG_4S     (_BV(WDE3) | _BV(WDE))
 #define WATCHDOG_8S     (_BV(WDE3) | _BV(WDE0) | _BV(WDE))
 
-/* Function Prototypes */
-/* The main function is in init9, which removes the interrupt vector table */
-/* we don't need. It is also 'naked', which means the compiler does not    */
-/* generate any entry or exit code itself. */
 int main(void) __attribute__ ((naked)) __attribute__ ((section (".init9")));
 void putch(char);
 uint8_t getch(void);
@@ -83,13 +76,10 @@ static inline void watchdogReset();
 void watchdogConfig(uint8_t x);
 void appStart() __attribute__ ((naked));
 
-/* C zero initialises all global variables. However, that requires */
-/* These definitions are NOT zero initialised, but that doesn't matter */
-/* This allows us to drop the zero init code, saving us memory */
 #define buff    ((uint8_t*)(0x100))
 #define address (*(uint16_t*)(0x200))
 #define length  (*(uint8_t*)(0x202))
-/* main program starts here */
+
 int main(void) {
   // After the zero init loop, this is the first code to run.
   //
@@ -111,7 +101,6 @@ int main(void) {
   UCSR0B = _BV(RXEN0) | _BV(TXEN0);
   UCSR0C = _BV(UCSZ00) | _BV(UCSZ01);
   UBRR0L = (uint8_t) ((F_CPU / (BAUD_RATE * 8L)) - 1);
-  //UBRR0L = 26;
 
   // Adaboot no-wait mod
   ch = MCUSR;

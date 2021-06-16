@@ -1,4 +1,4 @@
-# litte-bootloader-atmega238p
+# litte-bootloader-atmega328p
 Based on Optiboot.c v3. Tested and full run on atmega328p. 
 Frequencies:
 
